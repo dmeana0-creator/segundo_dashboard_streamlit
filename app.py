@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from streamlit_autorefresh import st_autorefresh
 import time
 
 st.title("Dashboard en streaming desde un log CSV")

@@ -5,22 +5,12 @@ import time
 
 st.set_page_config(page_title="Streaming Log Dashboard")
 
-# Refrescar cada 2 segundos
-st_autorefresh = st.experimental_rerun
+# Refrescar cada 2000 ms
+st.autorefresh(interval=2000, key="refresh")
 
-# Leer el archivo CSV
+st.title("Dashboard en streaming desde un archivo CSV")
+
 df = pd.read_csv("https://raw.githubusercontent.com/dmeana0-creator/segundo_dashboard_streamlit/refs/heads/main/log.csv")
 
-# Mostrar datos
-st.subheader("Últimos datos")
-st.dataframe(df.tail(10))
-
-# Mostrar métricas
-st.metric("Último valor", df["valor"].iloc[-1])
-
-# Gráfico en tiempo real
 st.line_chart(df["valor"])
-
-# Esperar y refrescar
-time.sleep(2)
-st.experimental_rerun()
+st.dataframe(df.tail(5))

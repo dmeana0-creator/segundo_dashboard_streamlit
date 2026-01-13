@@ -6,7 +6,7 @@ import time
 st.set_page_config(page_title="Streaming Log Dashboard")
 
 # Refrescar cada 2000 ms
-st.autorefresh(interval=2000, key="refresh")
+st_autorefresh(interval=2000, key="refresh")
 
 st.title("Dashboard en streaming desde un archivo CSV")
 

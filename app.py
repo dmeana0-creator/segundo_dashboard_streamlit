@@ -3,7 +3,7 @@ import pandas as pd
 from streamlit_autorefresh import st_autorefresh
 import time
 
-st.title("Dashboard en streaming desde un log CSV")
+st.set_page_config(page_title="Streaming Log Dashboard")
 
 # Refrescar cada 2 segundos
 st_autorefresh = st.experimental_rerun

@@ -8,7 +8,7 @@ st.title("Dashboard en streaming desde un log CSV")
 st_autorefresh = st.experimental_rerun
 
 # Leer el archivo CSV
-df = pd.read_csv("log.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/dmeana0-creator/segundo_dashboard_streamlit/refs/heads/main/log.csv")
 
 # Mostrar datos
 st.subheader("Últimos datos")
